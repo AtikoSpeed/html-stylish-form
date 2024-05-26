@@ -5,39 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Stylish Form</title>
   </head>
-  <body>
-    <form>
-      <h1>Say Hello!</h1>
-      <input
-        type="text"
-        name="email"
-        id="fullName"
-        placeholder="Enter ur næm"
-      />
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Enter your email address"
-      />
-
-      <select name="services" id="services">
-        <option value="">Choose Services</option>
-        <option value="Service-1">Service 1</option>
-      </select>
-      <select name="budget" id="budget">
-        <option value="">Select Budget</option>
-        <option value="Budget-1">Budget 1</option>
-      </select>
-      <textarea
-        name="message"
-        id="message"
-        rows="3"
-        placeholder="Your message here... "
-      ></textarea>
-      <button type="submit">Submit</button>
+  <body class="ubuntu-regular">
+    <form action="submit.html">
+      <h1 class="ubuntu-bold">Say Hello!</h1>
+      <div>
+        <label for="fullName">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="fullName"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email address"
+          required
+        />
+      </div>
+      <div>
+        <label for="services">Needed Services</label>
+        <select name="services" id="services" required>
+          <option value="">Choose Services</option>
+          <option value="Service-1">Service 1</option>
+        </select>
+      </div>
+      <div>
+        <label for="budget">Select Budget</label>
+        <select name="budget" id="budget" required>
+          <option value="">Select Budget</option>
+          <option value="Budget-1">Budget 1</option>
+        </select>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea
+          class="ubuntu-regular"
+          name="message"
+          id="message"
+          rows="3"
+          placeholder="Your message here... "
+        ></textarea>
+      </div>
+      <button type="submit">Submit →</button>
     </form>
   </body>
 </html>
